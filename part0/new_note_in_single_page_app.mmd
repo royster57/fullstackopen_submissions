@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: The browser starts executing the JavaScript code that redraws the notes
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/spa/new_note
+    activate server
+    server-->>browser: 201 Created
+    deactivate server
